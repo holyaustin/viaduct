@@ -7,6 +7,7 @@ import { storeToRefs } from 'pinia';
 import SafeImage from '~/components/SafeImage.vue';
 import { loadHistory } from '~/utils/history';
 import CryptoJS from 'crypto-js';
+// import { connectors }from './banana.vue'
 
 const wallet = useMetaMaskWallet()
 const store = useWeb3Store()
@@ -68,11 +69,7 @@ function closeModal() {
 
 
             <ul class="list-none flex space-x-2 items-center text-2xl">
-                <li class="z-0">
-                <router-link to="/">
-                    Home
-                </router-link> 
-                 &nbsp
+                <li class="z-0">               
                 <a href="https://sandbox.monerium.dev/partners/661c0725-44d3-11ed-adac-b2efc0e6677d/auth?code_challenge=K-A2XhPbn1C3-6hRG-3TAVEyg9MOchELRwhOV8bScj8&code_challenge_method=S256&response_type=code&client_id=654c9c30-44d3-11ed-adac-b2efc0e6677d&redirect_uri=https://viaduct-protocol.vercel.app/" target="_blank">
                 Euro-OnRamp
                 </a>
@@ -82,8 +79,9 @@ function closeModal() {
 
             <ul class="list-none flex space-x-2 items-center text-2xl">
                 <li class="z-0">
-                <a href="" target="_blank">
-                Banana
+
+                <a href="https://create.request.network/" target="_blank">
+                Request
                 </a>
                    
                 </li>
@@ -92,8 +90,8 @@ function closeModal() {
                         <ul class="list-none flex space-x-2 items-center text-2xl">
                 <li class="z-0">
 
-                <a href="" target="_blank">
-                Azuro
+                <a href="https://app.buidler.etherspot.io/" target="_blank">
+                Etherspot
                 </a>
                    
                 </li>
@@ -101,7 +99,7 @@ function closeModal() {
                         <ul class="list-none flex space-x-2 items-center">
                 <li class="z-0">
                     <button @click=""
-                        class="w-full mt-2 bg-primary-500 hover:bg-primary-600 transition rounded-lg py-2 px-3 font-bold text-xl">Transfer</button>
+                        class="w-full mt-2 bg-primary-500 hover:bg-primary-600 transition rounded-lg py-2 px-3 font-bold text-xl">Banana Wallet</button>
                 </li>
             </ul>
             <ul class="list-none flex space-x-2 items-center">

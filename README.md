@@ -21,9 +21,9 @@ Blockchain deployed to:  Gnosis
 
 ## Description
 
-This project uses a new solution for building trustless, permissionless, extensible, universal, and efficient cross-chain bridges using ZKP..
+Getblock User ID - viaduct
+Getblock RPC :  https://gno.getblock.io/cea4b01a-4c91-4ef4-823c-a6e5a4bdaaaf/mainnet/
 
-The smart contract uses ERC-721 specification to hold metadata URI, ethers.js was used to interact with the smart contract. The contract was deployed to Filecoin Hyperspace blockchain. The entire project demo was hosted to Vercel.
 
 ## Live DApp hosted on
 
