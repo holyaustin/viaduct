@@ -29,12 +29,7 @@ The smart contract uses ERC-721 specification to hold metadata URI, ethers.js wa
 
 Live Dapp on Vercel: - <https://viaduct-protocol.vercel.app/>
 
-Deployed to Polygon Chain:
-  Filecoin (Hyperspace) Testnet deployed Address = "0x4e75D8F85ED40aA3f73fB751b1Dfa07DEFe09C94"
-
-  <https://hyperspace.filfox.info/en/address/0x4e75D8F85ED40aA3f73fB751b1Dfa07DEFe09C94>
-
- Youtube video link: <https://youtu.be/kZvxCGMPci8>
+Youtube video link: <https://youtu.be/kZvxCGMPci8>
 
 ## Getting Started
 
@@ -80,6 +75,6 @@ Client secret:
 Authorization code  flow
 98e7998c-fc2a-11ed-9fe1-1e82d6c6448a
 
-https://sandbox.monerium.dev/partners/661c0725-44d3-11ed-adac-b2efc0e6677d/auth?code_challenge=K-A2XhPbn1C3-6hRG-3TAVEyg9MOchELRwhOV8bScj8&code_challenge_method=S256&response_type=code&client_id=654c9c30-44d3-11ed-adac-b2efc0e6677d&redirect_uri=https%3A%2F%2Fwww.example.com%2Fyour-application
+https://sandbox.monerium.dev/partners/661c0725-44d3-11ed-adac-b2efc0e6677d/auth?code_challenge=K-A2XhPbn1C3-6hRG-3TAVEyg9MOchELRwhOV8bScj8&code_challenge_method=S256&response_type=code&client_id=654c9c30-44d3-11ed-adac-b2efc0e6677d&redirect_uri=https://viaduct-protocol.vercel.app/
 
 https://sandbox.monerium.dev/partners/98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a/auth?client_id=98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a&code_challenge=9Y__uhKapn7GO_ElcaQpd8C3hdOyqTzAU4VXyR2iEV0&redirect_uri=http%3A%2F%2Flocalhost%3A3000&response_type=code

@@ -19,14 +19,6 @@ const history = ref([] as any[])
 
 onMounted(init)
 
-
-
-
-
-
-
-
-
 async function init() {
     const accounts = await wallet.getAccounts()
     if (accounts.length > 0) connectWallet()
@@ -59,39 +51,13 @@ async function connectWallet() {
 function closeModal() {
     open.value = false
 }
-
-
-async function monerium() {
-    console.log("Inside monerium");
-    const codeVerifier = CryptoJS.lib.WordArray.random(64).toString();
-    // code_challenge = base64urlEncode(SHA256(ASCII(code_verifier)))
-    const codeChallenge = CryptoJS.enc.Base64url.stringify(CryptoJS.SHA256(codeVerifier));
-    const params = {
-  client_id: "98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a",
-  redirect_uri: "https://viaduct-protocol.vercel.app/",
-  code_challenge: codeChallenge,
-  code_challenge_method: "S256",
-
-  // automate the wallet connect step by adding the following optional parameters
-  address: "0x0000000000000000000000000000000000000000",
-  signature: "0xVALID_SIGNATURE_2c23962f5a2f189b777b6ecc19a395f446c86aaf3b5d1dc0ba919ddb34372f4c9f0c8686cfc2e8266b3e4d8d1bc7bc67c34a11f9dfe8e691b",
-  chain: "gnosis",
-  network: "chiado",
-}
-
-await fetch(`https://api.monerium.dev/auth?${new URLSearchParams(params).toString()}`)
-
-}
-
-
-
 </script>
 
 <template>
     <nav class="bg-blue-900 m-2 rounded-lg ">
             <div class="h-6 bg-gradient-to-r from-primary-500 to-primary-600 rounded-b-lg">
         </div>
-        <div class="flex justify-between items-center px-14 py-2 mx-20">
+        <div class="flex justify-between items-center px-14 py-2 mx-">
             <img src="/favicon.ico" alt="logo" width="100"  >
             <div class="py-2">
                 <h1 class="logo">Viaduct Protocol</h1>
@@ -104,25 +70,43 @@ await fetch(`https://api.monerium.dev/auth?${new URLSearchParams(params).toStrin
             <ul class="list-none flex space-x-2 items-center text-2xl">
                 <li class="z-0">
                 <router-link to="/">
-                    Link to TestBlock
+                    Home
                 </router-link> 
-            &nbsp
-                <a href="https:google.com" target="_blank">
-                Monerium
+                 &nbsp
+                <a href="https://sandbox.monerium.dev/partners/661c0725-44d3-11ed-adac-b2efc0e6677d/auth?code_challenge=K-A2XhPbn1C3-6hRG-3TAVEyg9MOchELRwhOV8bScj8&code_challenge_method=S256&response_type=code&client_id=654c9c30-44d3-11ed-adac-b2efc0e6677d&redirect_uri=https://viaduct-protocol.vercel.app/" target="_blank">
+                Euro-OnRamp
+                </a>
+                   
+                </li>
+            </ul>
+
+            <ul class="list-none flex space-x-2 items-center text-2xl">
+                <li class="z-0">
+                <a href="" target="_blank">
+                Banana
+                </a>
+                   
+                </li>
+            </ul>
+
+                        <ul class="list-none flex space-x-2 items-center text-2xl">
+                <li class="z-0">
+
+                <a href="" target="_blank">
+                Azuro
                 </a>
                    
                 </li>
             </ul>
                         <ul class="list-none flex space-x-2 items-center">
                 <li class="z-0">
-                    <ConnectWalletButton @click="connectWallet" :address="address ?? ''" :dark="true"
-                        :txn-count="transactions.length" /> LiFi - Best Euro Price
+                    <button @click=""
+                        class="w-full mt-2 bg-primary-500 hover:bg-primary-600 transition rounded-lg py-2 px-3 font-bold text-xl">Transfer</button>
                 </li>
             </ul>
             <ul class="list-none flex space-x-2 items-center">
                 <li class="z-0">
-                    <ConnectWalletButton @click="connectWallet" :address="address ?? ''" :dark="true"
-                        :txn-count="transactions.length" /> Connect Wallet
+                    <ConnectWalletButton @click="connectWallet" :address="address ?? ''" :dark="true" :txn-count="transactions.length" class="w-full transition rounded-lg px-3 font-bold text-base" />
                 </li>
             </ul>
         </div>
