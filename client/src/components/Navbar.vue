@@ -4,8 +4,9 @@ import { ConnectWalletButton, useMetaMaskWallet, Jazzicon } from 'vue-connect-wa
 import { useWeb3Store } from '../stores/web3Store';
 import { ethers } from 'ethers'
 import { storeToRefs } from 'pinia';
-import SafeImage from '~/components/SafeImage.vue'
-import { loadHistory } from '~/utils/history'
+import SafeImage from '~/components/SafeImage.vue';
+import { loadHistory } from '~/utils/history';
+import CryptoJS from 'crypto-js';
 
 const wallet = useMetaMaskWallet()
 const store = useWeb3Store()
@@ -17,6 +18,14 @@ const open = ref(false)
 const history = ref([] as any[])
 
 onMounted(init)
+
+
+
+
+
+
+
+
 
 async function init() {
     const accounts = await wallet.getAccounts()
@@ -51,6 +60,31 @@ function closeModal() {
     open.value = false
 }
 
+
+async function monerium() {
+    console.log("Inside monerium");
+    const codeVerifier = CryptoJS.lib.WordArray.random(64).toString();
+    // code_challenge = base64urlEncode(SHA256(ASCII(code_verifier)))
+    const codeChallenge = CryptoJS.enc.Base64url.stringify(CryptoJS.SHA256(codeVerifier));
+    const params = {
+  client_id: "98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a",
+  redirect_uri: "https://viaduct-protocol.vercel.app/",
+  code_challenge: codeChallenge,
+  code_challenge_method: "S256",
+
+  // automate the wallet connect step by adding the following optional parameters
+  address: "0x0000000000000000000000000000000000000000",
+  signature: "0xVALID_SIGNATURE_2c23962f5a2f189b777b6ecc19a395f446c86aaf3b5d1dc0ba919ddb34372f4c9f0c8686cfc2e8266b3e4d8d1bc7bc67c34a11f9dfe8e691b",
+  chain: "gnosis",
+  network: "chiado",
+}
+
+await fetch(`https://api.monerium.dev/auth?${new URLSearchParams(params).toString()}`)
+
+}
+
+
+
 </script>
 
 <template>
@@ -64,10 +98,19 @@ function closeModal() {
                 <h3 class="px-3 text-gray-300">  XChain Bridging for DeFi </h3>
 
             </div>
-            <ul class="list-none flex space-x-2 items-center">
+
+
+
+            <ul class="list-none flex space-x-2 items-center text-2xl">
                 <li class="z-0">
-                    <ConnectWalletButton @click="connectWallet" :address="address ?? ''" :dark="true"
-                        :txn-count="transactions.length" /> OnRamp - Monerium
+                <router-link to="/">
+                    Link to TestBlock
+                </router-link> 
+            &nbsp
+                <a href="https:google.com" target="_blank">
+                Monerium
+                </a>
+                   
                 </li>
             </ul>
                         <ul class="list-none flex space-x-2 items-center">

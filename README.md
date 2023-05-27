@@ -1,10 +1,8 @@
-# Viaduct : : Cross-chain bridge and payment protocol
+# Viaduct : : ZK Cross-chain bridge and payment protocol
 
-A DApp to allow the user(host) to bridge assets across multiple blockchain with insight on pathway, gas and speed.
+A DApp to allow the user(host) to bridge assets across multiple blockchain with insight on pathway, gas and speed using zero knowledge.
 
 ![Mominter](https://bafybeieokaeh6ilnr3pgaw6m2c5pgjlf57qurafzzkhjdeqp76xnpd4yny.ipfs.w3s.link/logobig.png)
-
-
 
 ## Introduction
 
@@ -29,7 +27,7 @@ The smart contract uses ERC-721 specification to hold metadata URI, ethers.js wa
 
 ## Live DApp hosted on
 
-Live Dapp on Vercel: - <https://mominter.vercel.app/>
+Live Dapp on Vercel: - <https://viaduct-protocol.vercel.app/>
 
 Deployed to Polygon Chain:
   Filecoin (Hyperspace) Testnet deployed Address = "0x4e75D8F85ED40aA3f73fB751b1Dfa07DEFe09C94"
@@ -70,10 +68,18 @@ E-mail - holyaustin@yahoo.com
 
 stay connected on twitter @holyaustin
 
-https://live-par-1-abr-cdn.livepush.io/live_abr_cdn/emaIqCGoZw-6/index.m3u8
 
-https://hyperspace.filfox.info/en/address/0xa6d6f4556b022c0c7051d62e071c0acece5a1228
 
-LightHouse API - 1eceb394-fc75-43cf-83b6-546c9c13da57
+Client Credentials Authorization
+Client id:
+98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a
 
-Huddle01 - eee33ed8308ea7f4814202f6fee8c936c80d2f9f03d480b069f13974fe349e21
+Client secret:
+86dcbc5cf416ad7a7a8b431d9cee0873ad16f7b1d3a6b96613b7ea1b4adc8dfc
+
+Authorization code  flow
+98e7998c-fc2a-11ed-9fe1-1e82d6c6448a
+
+https://sandbox.monerium.dev/partners/661c0725-44d3-11ed-adac-b2efc0e6677d/auth?code_challenge=K-A2XhPbn1C3-6hRG-3TAVEyg9MOchELRwhOV8bScj8&code_challenge_method=S256&response_type=code&client_id=654c9c30-44d3-11ed-adac-b2efc0e6677d&redirect_uri=https%3A%2F%2Fwww.example.com%2Fyour-application
+
+https://sandbox.monerium.dev/partners/98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a/auth?client_id=98e8aedf-fc2a-11ed-9fe1-1e82d6c6448a&code_challenge=9Y__uhKapn7GO_ElcaQpd8C3hdOyqTzAU4VXyR2iEV0&redirect_uri=http%3A%2F%2Flocalhost%3A3000&response_type=code

@@ -2,6 +2,7 @@
   "name": "hardhat-project",
   "dependencies": {
     "axios": "^0.27.2",
+    "crypto-js": "^4.1.1",
     "qs": "^6.10.3",
     "web3": "1.7.3",
     "yarn": "^1.22.18"
