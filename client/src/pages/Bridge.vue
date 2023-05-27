@@ -95,7 +95,7 @@ async function getSupportedChains() {
     chainList1.value = chains.data.result
 
     selectedChain0.value = (chainList0.value as any)[0]
-    selectedChain1.value = (chainList1.value as any)[2]
+    selectedChain1.value = (chainList1.value as any)[3]
 }
 
 async function getSupportedTokens() {
@@ -155,7 +155,7 @@ async function getQuote() {
                 for (let txs in user_transactions) {
                     if (user_transactions[txs].userTxType == "fund-movr") {
                         console.log(user_transactions[txs])
-                        console.log(22222)
+                        //console.log(22222)
                         const stepss = user_transactions[txs].steps
                         for (let step in stepss) {
                             if (stepss[step].type == "bridge") {
@@ -235,14 +235,14 @@ async function transfer() {
 <template>
     <div class="md:(flex)">
         <!-- <div class="mt-20 w-10/12 mx-auto min-w-72 md:(min-w-96 w-45) bg-dark-100 p-5 rounded-lg"> -->
-        <div class="mt-20 w-10/12 mx-auto min-w-72 md:w-1/3 bg-dark-100 rounded-lg h-full">
-            <div class="p-5">
-                <h1 class="font-bold text-xl">Bridge</h1>
-                <h3 class="text-sm text-gray-300">Transfer tokens between varying chains. <br />
+        <div class="mt-20 w-10/12 mx-auto min-w-72 md:w-1/3 bg-dark-100 rounded-4xl h-full px-5">
+            <div class="p-5 rounded-3xl">
+                <h1 class="font-bold text-3xl my-5">Cross chain Bridge</h1>
+                <h3 class="text-base text-yellow-300 mb-5">Send assets across different chains. <br />
                     <span v-if="!address || address.length === 0" class="text-sm text-gray-300">Connect your wallet to begin!</span>
                 </h3>
 
-                <div class="flex flex-col md:flex-row md:items-center space-x-3 mt-3">
+                <div class="flex flex-col md:flex-row text-2xl md:items-center space-x-3 mt-5">
                     <Dropdown v-model="selectedChain0" :list="chainList0">
                         From Chain
                     </Dropdown>
@@ -253,7 +253,7 @@ async function transfer() {
                     </Dropdown>
 
                 </div>
-                <div class="mt-5">
+                <div class="mt-10 mb-5">
                     <InputField label="From token" v-model="selectedToken0" v-model:inputValue="inputAmount"
                         placeholder="0.0" :list="tokenList0" v-debounce:500ms="getQuote" />
                     <div class="my-1.5 w-full text-center">&darr;</div>
@@ -261,10 +261,10 @@ async function transfer() {
                         :placeholder="placeholder" :list="tokenList1" disabled="true" />
                 </div>
 
-                <div class="mt-5">
+                <div class="mt-5 mb-10">
                     <ApproveButton v-if="selectedToken0 && quoteResult" :token="selectedToken0" :spender="spender" />
                     <button @click="transfer"
-                        class="w-full mt-2 bg-primary-500 hover:bg-primary-600 transition rounded-lg p-3 font-bold"
+                        class="w-full mt-2 bg-primary-500 hover:bg-primary-600 transition rounded-lg p-3 font-bold text-xl"
                         :disabled="transferLoading">Transfer</button>
                 </div>
             </div>
@@ -283,19 +283,19 @@ async function transfer() {
                     </span></div>
             </div>
         </div>
-        <div class="mt-20 w-10/12 mx-auto min-w-72 md:w-1/3 bg-dark-100 p-5 rounded-lg">
-            <h1 class="font-bold text-lg">Routing</h1>
-            <div class="flex items-center space-x-3">
-                <p class="text-sm">
+        <div class="mt-20 w-10/12 mx-auto min-w-72 md:w-1/3 bg-dark-100 p-10 rounded-4xl px-10">
+            <h1 class="font-bold text-2xl">Routing Pathway(s)</h1>
+            <div class="flex items-center space-x-3 mt-2">
+                <p class="text-lg">
                     Priority:
                 </p>
-                <select v-model="priority" class="mt-0.5 text-white text-xs px-2 py-1 rounded-md bg-dark-500">
+                <select v-model="priority" class="mt-0.5 text-white text-lg px-2 py-1 rounded-md bg-dark-500">
                     <option value="Gas">Gas</option>
                     <option value="Time">Time</option>
                     <option value="Output">Output</option>
                 </select>
             </div>
-            <p v-if="!routes || routes.length === 0" class="text-sm mt-3">No routes available yet
+            <p v-if="!routes || routes.length === 0" class="text-lg mt-2">No routes available yet
             </p>
             <div v-else>
                 <div v-for="route in routes" :key="route.routeId" class="p-3 border border-gray-500 rounded-lg my-3">

@@ -1,8 +1,10 @@
-# Viaduct : : Cross-chain brdige and payment protocol
+# Viaduct : : Cross-chain bridge and payment protocol
 
 A DApp to allow the user(host) to bridge assets across multiple blockchain with insight on pathway, gas and speed.
 
-![Mominter](https://bafkreibsvdrhg4xrmdeujrz33smda7rziayuzpxb5cggcp4o5633sn4c2a.ipfs.nftstorage.link/)
+![Mominter](https://bafybeieokaeh6ilnr3pgaw6m2c5pgjlf57qurafzzkhjdeqp76xnpd4yny.ipfs.w3s.link/logobig.png)
+
+
 
 ## Introduction
 
@@ -21,7 +23,7 @@ Blockchain deployed to:  Gnosis
 
 ## Description
 
-This project was made using several technologies. The front-end was designed using a server-side-rendering javascript tech known as NextJS. the latest version of Next was used because of how fast it was to build the project.  IPFS / Filecoin's NFT.Storage was used to store user's video on their decentralized storage. videos of various news can be viewed on demand. They can share these Videos to anyone through a sharing mechansism that is easy to copy out the sharing IPFS URL. Huddle01 for video streaming ND CONFERENCE MEETING. Huddle01 was used for conference meeting.
+This project uses a new solution for building trustless, permissionless, extensible, universal, and efficient cross-chain bridges using ZKP..
 
 The smart contract uses ERC-721 specification to hold metadata URI, ethers.js was used to interact with the smart contract. The contract was deployed to Filecoin Hyperspace blockchain. The entire project demo was hosted to Vercel.
 
@@ -38,19 +40,9 @@ Deployed to Polygon Chain:
 
 ## Getting Started
 
-First, run the development server:
+https://bafybeigsuk3qqgz5x775mrnxv3kjzlfn2izwcg7ixkj7t74uj6rwcxkvp4.ipfs.w3s.link/logo.png
 
-```text
-clone the repo https://github.com/holyaustin/Mominter.git
-# next is to 
-npm install
-# then
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3016](http://localhost:3016) with your browser to see the result.
 
 ## How to run this project locally
 

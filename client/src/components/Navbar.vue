@@ -55,6 +55,8 @@ function closeModal() {
 
 <template>
     <nav class="bg-blue-900 m-2 rounded-lg ">
+            <div class="h-6 bg-gradient-to-r from-primary-500 to-primary-600 rounded-b-lg">
+        </div>
         <div class="flex justify-between items-center px-14 py-2 mx-20">
             <img src="/favicon.ico" alt="logo" width="100"  >
             <div class="py-2">
