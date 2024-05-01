@@ -24,6 +24,7 @@
     "process": "^0.11.10",
     "qs": "^6.10.3",
     "stream-browserify": "^3.0.0",
+    "veaury": "^2.3.12",
     "vite-plugin-windicss": "^1.8.4",
     "vue": "^3.2.25",
     "vue-connect-wallet": "^0.1.5",

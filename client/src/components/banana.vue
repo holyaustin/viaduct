@@ -54,4 +54,3 @@ import { BananaWallet } from '@rize-labs/banana-rainbowkit-plugin'
     </div>
 </template>
 
-

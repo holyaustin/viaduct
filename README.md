@@ -6,7 +6,7 @@ A DApp to allow the user to bridge assets across multiple blockchain with insigh
 
 ## Introduction
 
-Lots of Blockchains are frequently hitting the space. The yearning for cross chain bridges has been one on the top of the list becasue users should be able to convert or transfer existing assets from an existing blockchain to a new one. This projects seeks to answer that question anad make it easy for users to cross their assets to their desired chain with ease. 
+Lots of Blockchains are frequently hitting the space. The yearning for cross chain bridges has been one on the top of the list becasue users should be able to convert or transfer existing assets from an existing blockchain to a new one. This projects seeks to answer that question and make it easy for users to cross their assets to their desired chain with ease. 
 
 Viadusct is that place for cross chain bridging, on ramp and payment processing.
 
@@ -20,6 +20,7 @@ Backend: Solidity, Node.js
 Blockchain deployed to:  Gnosis
 
 ## Technologies Implemented
+Built a zk bridge that can bridge asset gnosis to other chains and from other chains to Gnosis, Monerium was used to implement Euro On-ramp, and Etherspot was a  whole bunch of tools. users can use Etherpot to send funds to recipients.  Rainbow SDK for banana wallet was implemented for both hardware and web3 logins. Getblock created an RPC for gnosis to talk with Gnosis chain. Request was used to allow users to create receipts for payments.
 
 Getblock User ID - viaduct
 Getblock RPC :  https://gno.getblock.io/cea4b01a-4c91-4ef4-823c-a6e5a4bdaaaf/mainnet/
